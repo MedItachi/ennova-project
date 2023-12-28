@@ -1,0 +1,9 @@
+<div class="select-field">
+    <label for="selectInput">{{ label }}</label>
+    <select id="selectInput" (change)="onSelectionChange()" [(ngModel)]="selectedValue">
+      <option *ngFor="let option of options" [value]="option.value">
+        {{ option.label }}
+      </option>
+    </select>
+    <div class="error-message" *ngIf="hasError">{{ errorMessage }}</div>
+</div>

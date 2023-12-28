@@ -1,0 +1,41 @@
+<div>
+  <form (ngSubmit)="onSubmit()">
+    <div><span>Nouvelle taches</span></div>
+    <app-text-field label="Titre" [(value)]="title"></app-text-field>
+    <div>
+      <app-option-field
+        class="tasks"
+        label="Type de tache"
+        [options]="tasks"
+        [(selectedValue)]="task"
+      ></app-option-field>
+      <div class="real-estat">
+        <app-select-field
+          label="Type d'unité"
+          [options]="unityTypes"
+          (selectedValueChange)="handleSelectionChange($event)"
+          [(selectedValue)]="unityType"
+        ></app-select-field>
+        <app-select-field
+          label="Nom du bien"
+          [options]="names"
+          [(selectedValue)]="name"
+        ></app-select-field>
+      </div>
+    </div>
+    <app-add-task
+      (subtasksChange)="onSubtasksChange($event)"
+      (addTask)="onAddTask()"
+    ></app-add-task>
+    <div class="button">
+      <button type="submit">Enregistrer</button>
+      <span (click)="reset()" class="reset">Réintialiser</span>
+    </div>
+  </form>
+  <app-data-show
+    class="data-show"
+    (click)="onHideData($event)"
+    *ngIf="showDisplayData"
+    [data]="state"
+  ></app-data-show>
+</div>

@@ -1,0 +1,17 @@
+div{
+    display: flex;
+    flex-direction: column;
+}
+.custom-input {
+    display: block;
+    width: 220px;
+    padding: 4px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 12px;
+    outline: none;
+    &:focus {
+      border-color: #33b5e5;
+      box-shadow: 0 0 5px rgba(51, 181, 229, 0.5);
+    }
+}

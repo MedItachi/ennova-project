@@ -1,0 +1,25 @@
+.custom-input {
+    display: block;
+    width: 150px;
+    padding: 4px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 12px;
+    outline: none;
+    &:focus {
+      border-color: #33b5e5;
+      box-shadow: 0 0 5px rgba(51, 181, 229, 0.5);
+    }
+}
+.sub-task{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+.task-delete{
+    font-size: 10px;
+    font-weight: bold;
+    color: #33b5e5;
+    cursor: pointer;
+}

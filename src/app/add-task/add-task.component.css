@@ -1,0 +1,12 @@
+.add-sub-task{
+    margin-top: 8px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #33b5e5;
+    cursor: pointer;
+}
+.list-subtasks{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}

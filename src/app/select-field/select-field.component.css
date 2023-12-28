@@ -1,0 +1,22 @@
+.select-field{
+    display:flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+#selectInput {
+    border: none;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px 10px;
+    appearance: none; /* Remove default arrow on some browsers */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  
+  #selectInput:focus {
+    border: none;
+    outline: 1px solid #33b5e5;
+    box-shadow: 0 0 5px rgba(51, 181, 229, 0.5);
+  }

@@ -1,0 +1,16 @@
+<div>
+    <h2>Affichage d'information</h2>
+    <p><strong>Title:</strong> {{ data.title }}</p>
+    <p><strong>Task:</strong> {{ data.task }}</p>
+    <p><strong>Unity Type:</strong> {{ data.unityType }}</p>
+    <p><strong>Name:</strong> {{ data.name }}</p>
+  
+    <div *ngIf="data.subtasks.length > 0">
+      <h3>Subtasks:</h3>
+      <ul>
+        <li *ngFor="let subtask of data.subtasks">
+          {{ subtask.description }} ({{ subtask.completed ? 'Completed' : 'Incomplete' }})
+        </li>
+      </ul>
+    </div>
+  </div>

@@ -1,0 +1,5 @@
+<div class="sub-task">
+  <input type="checkbox" [(ngModel)]="subtask.completed" />
+  <input class="custom-input" type="text" [(ngModel)]="subtask.description" placeholder="Crée le plancher" />
+  <span class="task-delete" (click)="onDeleteSubtask()">Supprimer</span>
+</div>

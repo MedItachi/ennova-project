@@ -1,0 +1,44 @@
+.options-container{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; 
+}
+.option label::before,
+.option label::after{
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.option input[type="radio"] {
+    display: none;
+}
+  
+.option label {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    text-overflow: ellipsis; 
+}
+  
+.option input[type="radio"]:checked + label {
+    background-color: #f8fcff; 
+    border-color: #33b5e5; 
+    box-shadow: 0 0 5px rgba(51, 181, 229, 0.5);
+}
+  
+.option input[type="radio"]:checked + label::before {
+    background-color: #33b5e5;
+}

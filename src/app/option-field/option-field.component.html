@@ -1,0 +1,12 @@
+<div class="option-field">
+  <label for="optionInput">{{ label }}</label>
+  <div class="options-container">
+    <ng-container *ngFor="let option of options">
+      <div class="option">
+        <input type="radio" id="{{ option.value }}" name="optionGroup" [(ngModel)]="selectedValue" [value]="option.value" (change)="onOptionChange()">
+        <label for="{{ option.value }}">{{ option.label }}</label>
+      </div>
+    </ng-container>
+  </div>
+  <div class="error-message" *ngIf="hasError">{{ errorMessage }}</div>
+</div>

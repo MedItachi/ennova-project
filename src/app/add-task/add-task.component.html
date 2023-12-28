@@ -1,0 +1,9 @@
+<div >
+  <h3>Sous-tâches</h3>
+  <div class="list-subtasks">
+    <div *ngFor="let subtask of subtasks; let i = index">
+      <app-sub-tasks [subtask]="subtasks[i]" (deleteSubtask)="onDeleteSubtask(i)"></app-sub-tasks>
+    </div>
+  </div>
+  <span class="add-sub-task" (click)="onAddTask()">Ajouter</span>
+</div>
